@@ -1,7 +1,25 @@
 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path("cocktail.jpg") %>')">
-  Cocktails
+ MakeMyCocktail.com
+
 </div>
 
+<br>
+<%= link_to '', new_cocktail_path, class:"fas fa-cocktail" %>
+<div class = "container">
+
+
 <% @cocktails.each do |cocktail| %>
-<p><%= cocktail[:name] %></p>
-<% end %>
+<div class="cards">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path("cocktail.jpg") %>')">
+
+    <%= link_to cocktail[:name], cocktail_path(cocktail) %>
+
+  </div>
+
+</div>
+ <% end %>
+
+</div>
+
+
+
